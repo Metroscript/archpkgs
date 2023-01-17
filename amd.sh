@@ -22,7 +22,7 @@ cd
 yay -S --no-confirm librewolf-bin mintstick sticky xviewer timeshift
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.defaults.applications.terminal exec xfce4-terminal
-sudo mv /Archinstall/sha256sum.nemo_action /usr/share/nemo/actions
+sudo mv /archpkgs/sha256sum.nemo_action /usr/share/nemo/actions
 sudo timedatectl set-timezone Australia/Sydney
 sudo systemctl enable systemd-timesyncd sddm
 sudo reboot
