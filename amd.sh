@@ -1,0 +1,27 @@
+sudo dd if=/dev/zero of=/swapfile bs=1M count=2048 status=progress
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo cp /etc/fstab /etc/fstab.bak
+sudo echo '/swapfile none swap 0 0' | sudo tee -a /etc/fstab
+sudo mount -a
+sudo swapon -a
+free -m
+sudo sed -i 's./root./root resume=UUID=DEV/MAAPER/ROOTUUID.' /boot/loader/entries/arch.conf
+sudo nano /boot/loader/entries/arch.conf
+sudo sed -i 's/#Color/Color' /etc/pacman.conf
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+sudo pacman -Syyu --needed wayland mesa plasma-{wayland-session,nm,desktop,pa,firewall,disks,thunderbolt,vault,systemmonitor} kde{plasma-addons,-gtk-config} xfce4-terminal k{gamma5,infocenter,screen,screenlocker,menuedit,wayland-integration,eepassxc} powerdevil gimp discover sddm{,-kcm} nemo{,-fileroller} gparted spectacle qbittorrent rhythmbox lollypop x(ed,reader) libreoffice-still gnome-calculator mpv print-manager simple-scan oxygen vulkan-{radeon,icd-loader} wine gnutls lib{pulse,32-{gnutls,libpulse,mesa,vulkan-{radeon,icd-loader}}} steam flatpak firewalld neofetch
+git clone --depth=1 https:aur.archlinux.org/grapejuice-git.git
+cd grapejuice-git
+makepkg -si --no-confirm
+cd
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --no-confirm
+cd
+yay -S --no-confirm librewolf-bin mintstick sticky xviewer timeshift
+gsettings set org.cinnamon.desktop.privacy remember-recent-files false
+gsettings set org.cinnamon.desktop.defaults.applications.terminal exec xfce4-terminal
+sudo mv /Archinstall/sha256sum.nemo_action /usr/share/nemo/actions
+sudo systemctl enable systemd-timesyncd sddm
+sudo reboot
