@@ -14,5 +14,6 @@ nano /etc/hostname
 passwd
 useradd -m -g users -G wheel arch
 passwd arch
-sed -i 's/#%wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL' /etc/sudoers
+sed -i 's/#%wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+exit
 reboot
