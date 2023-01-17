@@ -6,7 +6,7 @@ sudo echo '/swapfile none swap 0 0' | sudo tee -a /etc/fstab
 sudo mount -a
 sudo swapon -a
 free -m
-sudo sed -i 's./root./root resume=UUID=DEV/MAAPER/ROOTUUID.' /boot/loader/entries/arch.conf
+sudo sed -i 's/#resume=/resume=/' /boot/loader/entries/arch.conf
 sudo nano /boot/loader/entries/arch.conf
 sudo sed -i 's/#Color/Color/' /etc/pacman.conf
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
