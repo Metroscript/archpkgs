@@ -9,7 +9,7 @@ free -m
 sudo sed -i 's/#resume=/resume=/' /boot/loader/entries/arch.conf
 sudo sed -i 's/#Color/Color/' /etc/pacman.conf
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-sudo pacman -Syyu --needed wayland mesa plasma-{wayland-session,nm,desktop,pa,firewall,disks,thunderbolt,vault,systemmonitor} kde{plasma-addons,-gtk-config} xfce4-terminal k{gamma5,infocenter,screen,screenlocker,menuedit,wayland-integration,eepassxc} powerdevil gimp discover sddm{,-kcm} nemo{,-fileroller} gparted spectacle qbittorrent rhythmbox lollypop x{ed,reader} libreoffice-still gnome-calculator mpv print-manager simple-scan oxygen vulkan-{radeon,icd-loader} wine gnutls lib{pulse,32-{gnutls,libpulse,mesa,vulkan-{radeon,icd-loader}}} steam flatpak firewalld neofetch
+sudo pacman -Syyu --needed wayland mesa plasma-{wayland-session,nm,desktop,pa,firewall,disks,thunderbolt,vault,systemmonitor} kde{plasma-addons,-gtk-config} xfce4-terminal k{gamma5,infocenter,screen,screenlocker,menuedit,wayland-integration,eepassxc} powerdevil gimp discover sddm{,-kcm} nemo{,-fileroller} gparted spectacle qbittorrent rhythmbox lollypop x{ed,reader} libreoffice-still gnome-calculator mpv print-manager simple-scan oxygen vulkan-{radeon,icd-loader} wine gnutls lib{pulse,32-{gnutls,libpulse,mesa,vulkan-{radeon,icd-loader}}} steam flatpak virtualbox firewalld neofetch
 git clone --depth=1 https://aur.archlinux.org/grapejuice-git.git
 cd grapejuice-git
 makepkg -si --noconfirm
