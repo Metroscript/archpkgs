@@ -17,7 +17,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
-yay -S --noconfirm librewolf-bin mintstick sticky xviewer timeshift
+yay -S --noconfirm librewolf-bin mintstick xviewer timeshift
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.defaults-applications.terminal exec xfce4-terminal
 sudo mv archpkgs/sha256sum.nemo_action /usr/share/nemo/actions
