@@ -1,6 +1,3 @@
-#
-##### REQUIRES LINUX KERNEL 6.1.7!
-#
 sudo dd if=/dev/zero of=/swapfile bs=1M count=2048 status=progress
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
