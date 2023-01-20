@@ -24,5 +24,5 @@ gsettings set org.cinnamon.desktop.defaults-applications.terminal exec xfce4-ter
 sudo mv archpkgs/sha256sum.nemo_action /usr/share/nemo/actions
 sudo timedatectl set-timezone Australia/Sydney
 sudo systemctl enable systemd-timesyncd sddm
-systemctl --user --now enable pipewire.service pipewire-pulse.service
+systemctl --user --now enable wireplumber.service pipewire.service pipewire-pulse.service
 sudo reboot
