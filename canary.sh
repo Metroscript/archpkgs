@@ -22,7 +22,8 @@ yay -S --noconfirm librewolf-bin mintstick xviewer timeshift
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
 sudo mv archpkgs/sha256sum.nemo_action /usr/share/nemo/actions
-mv archpkgs/.bashrc .bashrc
+mv archpkgs/bashrc .bashrc
+sudo mv archpkgs/yt-dlp.conf /etc/yt-dlp.conf
 sudo timedatectl set-timezone Australia/Sydney
 sudo systemctl enable systemd-timesyncd sddm
 systemctl --user --now enable wireplumber.service pipewire.service pipewire-pulse.service
