@@ -10,5 +10,5 @@ alias update='sudo pacman -Syyu'
 alias ll='ls -A'
 alias ytaudio='yt-dlp -x -f bestaudio[ext=m4a] --add-metadata --embed-thumbnail'
 alias audio='yt-dlp -x -f bestaudio[ext=mp3] --add-metadata --embed-thumbnail'
-alias pkgcleanup='sudo pacman -Sc
+alias cleanup='sudo pacman -Sc
 PS1='[\u@\h \W]\$ '
