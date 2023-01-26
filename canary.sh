@@ -21,11 +21,11 @@ cd
 yay -S --noconfirm librewolf-bin popsicle-git xviewer timeshift plymouth-git downgrade
 sudo sed -i -e 's/udev/udev plymouth/g' -i -e 's/encrypt/plymouth-encrypt/g' /etc/mkinitcpio.conf
 sudo mkinitcpio -P linux
-sudo sed -i 's/splash/splash vt.global_cursor_default=0' /boot/loader/entries/arch.conf
+sudo sed -i 's/splash/splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
 sudo cp /usr/share/plymouth/arch-logo.png /usr/share/plymouth/themes/spinner/watermark.png
-sudo sed -i 's/WatermarkVerticalAlignment=0.96/WatermarkVerticalAlignment=0.5' /usr/share/plymouth/themes/spinner/spinner.plymouth
+sudo sed -i 's/WatermarkVerticalAlignment=0.96/WatermarkVerticalAlignment=0.5/' /usr/share/plymouth/themes/spinner/spinner.plymouth
 sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/lts.conf
-sudo sed -i -e 's/Arch Linux/Arch Linux-LTS' -i -e 's/vmlinuz-linux/vmlinuz-linux-lts' -i -e 's/initramfs-linux/initramfs-linux-lts' /boot/loader/entries/lts.conf
+sudo sed -i -e 's/Arch Linux/Arch Linux-LTS/' -i -e 's/vmlinuz-linux/vmlinuz-linux-lts/' -i -e 's/initramfs-linux/initramfs-linux-lts/' /boot/loader/entries/lts.conf
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
 sudo mv archpkgs/sha256sum.nemo_action /usr/share/nemo/actions
