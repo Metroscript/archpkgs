@@ -31,4 +31,4 @@ sudo timedatectl set-timezone Australia/Sydney
 sudo systemctl enable systemd-timesyncd sddm-plymouth
 sudo cp /usr/share/plymouth/arch-logo.png /usr/share/plymouth/themes/spinner/watermark.png
 systemctl --user --now enable wireplumber.service pipewire.service pipewire-pulse.service
-sudo reboot
+reboot
