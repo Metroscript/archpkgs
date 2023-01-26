@@ -29,6 +29,6 @@ sudo mv archpkgs/sha256sum.nemo_action /usr/share/nemo/actions
 mv archpkgs/bashrc .bashrc
 sudo mv archpkgs/yt-dlp.conf /etc/yt-dlp.conf
 sudo timedatectl set-timezone Australia/Sydney
-sudo systemctl enable systemd-timesyncd sddm
+sudo systemctl enable systemd-timesyncd sddm-plymouth
 systemctl --user --now enable wireplumber.service pipewire.service pipewire-pulse.service
 sudo reboot
