@@ -35,7 +35,7 @@ sudo sed -i -e 's/Arch Linux/Arch Linux Fallback/' -i -e 's/initramfs-linux/init
 sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/lts.conf
 sudo sed -i -e 's/Arch Linux/Arch Linux-LTS/' -i -e 's/vmlinuz-linux/vmlinuz-linux-lts/' -i -e 's/initramfs-linux/initramfs-linux-lts/' /boot/loader/entries/lts.conf
 sudo cp /boot/loader/entries/lts.conf /boot/loader/entries/lts-fallback.conf
-sudo sed -i -e 's/Arch Linux/Arch Linux-LTS Fallback/' -i -e 's/initramfs-linux/initramfs-linux-lts-fallback/' /boot/loader/entries/lts-fallback.conf
+sudo sed -i -e 's/Arch Linux/Arch Linux-LTS Fallback/' -i -e 's/initramfs-linux-lts/initramfs-linux-lts-fallback/' /boot/loader/entries/lts-fallback.conf
 
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
