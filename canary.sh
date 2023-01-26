@@ -7,8 +7,9 @@ sudo echo '/swapfile none swap 0 0' | sudo tee -a /etc/fstab
 sudo mount -a
 sudo swapon -a
 free -m
-
 sudo sed -i 's/#resume=/resume=/' /boot/loader/entries/arch.conf
+
+#Install packages
 sudo sed -i -e 's/#Color/Color/' -i -e "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 sudo mv archpkgs/mirrorlist /etc/pacman.d/mirrorlist
 sudo pacman -Sy --needed linux-lts wayland mesa pipewire{,-{jack,pulse,alsa}} wireplumber plasma-{wayland-session,nm,desktop,pa,firewall,disks,thunderbolt,vault,systemmonitor} kde{plasma-addons,-gtk-config} k{gamma5,infocenter,screen,screenlocker,menuedit,wayland-integration,eepassxc,pipewire} powerdevil gimp discover sddm{,-kcm} nemo{,-fileroller,-share} gparted qbittorrent rhythmbox lollypop x{ed,reader,fce4-{terminal,screenshooter}} libreoffice-still gnome-calculator mpv print-manager simple-scan vulkan-{radeon,icd-loader} wine gnutls lib{pulse,32-{gnutls,libpulse,pipewire{,-jack},mesa,vulkan-{radeon,icd-loader}}} steam flatpak xdg-desktop-portal-kde phonon-qt5-gstreamer gnu-free-fonts ttf-ubuntu-font-family rust aspell{,-en}yt-dlp atomicparsley virtualbox{,-host-modules-arch} firewalld neofetch
