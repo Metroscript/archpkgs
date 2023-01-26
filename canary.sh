@@ -18,7 +18,11 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
-yay -S --noconfirm librewolf-bin popsicle-git xviewer timeshift
+yay -S --noconfirm librewolf-bin popsicle-git xviewer timeshift plymouth-git
+sudo sed -i -e 's/udev/udev plymouth/g' -i -e 's/encrypt/plymouth-encrypt' /etc/mkinitcpio.conf
+sudo mkinitcpio -P linux
+sudo sed -i 's/splash/splash vt.global_cursor_default=0' /boot/loader/entries/arch.conf
+sudo cp /usr/share/plymouth/arch-logo.png /usr/share/plymouth/themes/spinner/watermark.png
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
 sudo mv archpkgs/sha256sum.nemo_action /usr/share/nemo/actions
