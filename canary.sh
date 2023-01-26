@@ -23,7 +23,7 @@ sudo sed -i -e 's/udev/udev plymouth/g' -i -e 's/encrypt/plymouth-encrypt/g' /et
 sudo mkinitcpio -P linux
 sudo sed -i 's/splash/splash vt.global_cursor_default=0' /boot/loader/entries/arch.conf
 sudo cp /usr/share/plymouth/arch-logo.png /usr/share/plymouth/themes/spinner/watermark.png
-sudo sed -i 's/WatermarkVerticalAlignment=0.96/WatermarkVerticalAlignment=0.5'
+sudo sed -i 's/WatermarkVerticalAlignment=0.96/WatermarkVerticalAlignment=0.5' /usr/share/plymouth/themes/spinner/spinner.plymouth
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
 sudo mv archpkgs/sha256sum.nemo_action /usr/share/nemo/actions
