@@ -30,7 +30,7 @@ sudo cp /usr/share/plymouth/arch-logo.png /usr/share/plymouth/themes/spinner/wat
 sudo sed -i 's/WatermarkVerticalAlignment=0.96/WatermarkVerticalAlignment=0.5/' /usr/share/plymouth/themes/spinner/spinner.plymouth
 
 #Kernel fallbacks
-sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/arch_fallback.conf
+sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/arch-fallback.conf
 sudo sed -i -e 's/Arch Linux/Arch Linux Fallback/' -i -e 's/initramfs-linux/initramfs-linux-fallback/' /boot/loader/entries/arch-fallback.conf
 sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/lts.conf
 sudo sed -i -e 's/Arch Linux/Arch Linux-LTS/' -i -e 's/vmlinuz-linux/vmlinuz-linux-lts/' -i -e 's/initramfs-linux/initramfs-linux-lts/' /boot/loader/entries/lts.conf
