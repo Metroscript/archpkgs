@@ -41,7 +41,7 @@ sudo sed -i -e 's/Arch Linux/Arch Linux-LTS Fallback/' -i -e 's/initramfs-linux-
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
 mv archpkgs/bashrc .bashrc
-mv archpkgs/yt-dlp.conf .yt-dlp.conf
+sudo mv archpkgs/yt-dlp.conf /etc/yt-dlp.conf
 sudo timedatectl set-timezone Australia/Sydney
 sudo systemctl enable systemd-timesyncd sddm-plymouth
 systemctl --user --now start wireplumber.service pipewire.service pipewire-pulse.service
