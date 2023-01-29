@@ -45,5 +45,5 @@ mv archpkgs/bashrc .bashrc
 mv archpkgs/yt-dlp.conf .config/
 sudo timedatectl set-timezone Australia/Sydney
 sudo systemctl enable systemd-timesyncd sddm-plymouth
-systemctl --user --now start wireplumber.service pipewire.service pipewire-pulse.service
+systemctl --user --now enable wireplumber.service pipewire.service pipewire-pulse.service
 reboot
