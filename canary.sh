@@ -21,7 +21,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
-yay -S --noconfirm librewolf-bin popsicle-git xviewer timeshift plymouth-git downgrade
+yay -S --noconfirm librewolf-bin popsicle-git xviewer timeshift downgrade
 
 #Configure Plymouth
 sudo sed -i -e 's/udev/udev plymouth/g' -i -e 's/encrypt/plymouth-encrypt/g' /etc/mkinitcpio.conf
@@ -44,6 +44,6 @@ gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-term
 mv archpkgs/bashrc .bashrc
 mv archpkgs/yt-dlp.conf .config/
 sudo timedatectl set-timezone Australia/Sydney
-sudo systemctl enable systemd-timesyncd sddm-plymouth
+sudo systemctl enable systemd-timesyncd sddm
 systemctl --user --now enable wireplumber.service pipewire.service pipewire-pulse.service
 reboot
