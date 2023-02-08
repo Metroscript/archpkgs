@@ -13,6 +13,4 @@ alias audio='yt-dlp -x -f bestaudio[ext=mp3] --add-metadata --embed-thumbnail'
 alias cleanup='sudo pacman -Sc'
 alias kernellock='sudo sed -i 's/#IgnorePkg   =/IgnorePkg   =linux/' /etc/pacman.conf
 alias kernelunlock='sudo sed -i s/' /etc/pacman.conf
-#alias format32='sudo umount  && sudo mkfs.vfat '
-#alias formatext='sudo umount && sudo mkfs.ext4 '
 PS1='[\u@\h \W]\$ '
