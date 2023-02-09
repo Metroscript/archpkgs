@@ -12,7 +12,7 @@ sudo sed -i 's/#resume=/resume=/' /boot/loader/entries/arch.conf
 #Install packages
 sudo sed -i -e 's/#Color/Color/' -i -e "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 sudo mv archpkgs/mirrorlist /etc/pacman.d/mirrorlist
-sudo pacman -Sy --needed linux-{headers,lts{,-headers}} wayland mesa pipewire{,-{jack,pulse,alsa}} wireplumber plasma-{wayland-session,nm,desktop,pa,firewall,disks,thunderbolt,vault,systemmonitor} kde{plasma-addons,-gtk-config} k{gamma5,infocenter,screen,screenlocker,menuedit,wayland-integration,eepassxc,pipewire} powerdevil gimp discover sddm{,-kcm} nemo{,-fileroller,-share} gparted qbittorrent rhythmbox lollypop x{ed,reader,fce4-terminal} spectacle libreoffice-still gnome-calculator mpv print-manager simple-scan vulkan-{radeon,icd-loader} wine gnutls lutris vkd3d lib{pulse,32-{gnutls,libpulse,vkd3d,pipewire{,-jack},mesa,vulkan-{radeon,icd-loader}}} steam flatpak xdg-desktop-portal-kde phonon-qt5-gstreamer gnu-free-fonts ttf-ubuntu-font-family rust aspell{,-en} yt-dlp atomicparsley virtualbox{,-host-dkms} firewalld neofetch
+sudo pacman -Sy --needed linux-{headers,lts{,-headers}} wayland mesa pipewire{,-{jack,pulse,alsa}} wireplumber plasma-{wayland-session,nm,desktop,pa,firewall,disks,thunderbolt,vault,systemmonitor} kde{plasma-addons,-gtk-config} k{gamma5,infocenter,screen,screenlocker,menuedit,wayland-integration,eepassxc,pipewire} powerdevil gimp discover sddm{,-kcm} nemo{,-fileroller,-share} gparted qbittorrent rhythmbox lollypop x{ed,reader,fce4-terminal} spectacle libreoffice-still gnome-calculator mpv print-manager simple-scan vulkan-{radeon,icd-loader} wine gnutls lutris vkd3d lib{pulse,32-{gnutls,libpulse,vkd3d,pipewire{,-jack},mesa,vulkan-{radeon,icd-loader}}} steam flatpak xdg-desktop-portal-kde phonon-qt5-gstreamer gnu-free-fonts ttf-ubuntu-font-family rust hunspell{,-en_au} languagetool yt-dlp atomicparsley virtualbox{,-host-dkms} firewalld neofetch
 git clone --depth=1 https://aur.archlinux.org/grapejuice-git.git
 cd grapejuice-git
 makepkg -si --noconfirm
@@ -21,7 +21,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
-yay -S --noconfirm librewolf-bin popsicle-git xviewer timeshift downgrade
+yay -S --noconfirm libre{wolf-bin,office-extention-languagetool} popsicle-git xviewer timeshift downgrade
 
 #Configure Plymouth
 #sudo sed -i -e 's/udev/udev plymouth/g' -i -e 's/encrypt/plymouth-encrypt/g' /etc/mkinitcpio.conf
