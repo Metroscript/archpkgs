@@ -7,10 +7,7 @@
 
 alias ls='ls --color=auto'
 alias update='sudo pacman -Syyu'
-alias ll='ls -A'
+alias ll='ls -a -- color=auto'
 alias ytaudio='yt-dlp -x -f bestaudio[ext=m4a] --add-metadata --embed-thumbnail'
 alias audio='yt-dlp -x -f bestaudio[ext=mp3] --add-metadata --embed-thumbnail'
-alias cleanup='sudo pacman -Sc'
-alias kernellock='sudo sed -i 's/#IgnorePkg   =/IgnorePkg   =linux/' /etc/pacman.conf
-alias kernelunlock='sudo sed -i s/' /etc/pacman.conf
 PS1='[\u@\h \W]\$ '
