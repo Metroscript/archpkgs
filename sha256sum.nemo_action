@@ -1,8 +1,0 @@
-[Nemo Action]
-Active=true
-Name=Check SHA256
-Comment=Check SHA256 signature
-Exec=mint-sha256sum '%F'
-Icon-Name=system-run-symbolic
-Selection=S
-Mimetypes=application/x-iso9660-image
