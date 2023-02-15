@@ -45,6 +45,7 @@ gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
 mv archpkgs/bashrc .bashrc
 mv archpkgs/yt-dlp.conf .config/
+mv arch pkgs/vimrc .vimrc
 sudo timedatectl set-timezone Australia/Sydney
 sudo systemctl enable systemd-timesyncd sddm cups
 systemctl --user --now enable wireplumber.service pipewire.service pipewire-pulse.service
