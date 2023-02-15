@@ -20,5 +20,6 @@ set hlsearch "highlight search results
 
 set ruler "always show current position
 set background=dark
+nmap <leader>w :w!<cr> "use 'w' to quicksave
 
 filetype plugin indent on "have VIM load indentation rules and plugins based on filetype
