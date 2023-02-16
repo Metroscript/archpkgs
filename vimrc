@@ -22,7 +22,8 @@ set ruler "always show current position
 set background=light "makes things darker somehow
 nmap <leader>w :w!<cr> "use 'w' to quicksave
 set clipboard=unamedplus "makes the default clipboard the system clipboard
-vnoremap <C-c> "+y  "rebinds to copy to the system clipboard. Requires gvim
+"rebinds to copy to the system clipboard. Requires gvim
+vnoremap <C-c> "+y
 map <C-p> "+P
 set autoindent "automatically formats indenting if applicable
 set fileformat=unix
