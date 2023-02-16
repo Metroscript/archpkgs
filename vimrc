@@ -19,7 +19,16 @@ set ignorecase "search regardless of casing
 set hlsearch "highlight search results
 
 set ruler "always show current position
-set background=dark
+set background=light "makes things darker somehow
 nmap <leader>w :w!<cr> "use 'w' to quicksave
+set clipboard=unamedplus "makes the default clipboard the system clipboard
+vnoremap <C-c> "+y  "rebinds to copy to the system clipboard. Requires gvim
+map <C-p> "+P
+set autoindent "automatically formats indenting if applicable
+set fileformat=unix
+set encoding=utf-8
+set wildmode=longest,list,full "enables autocomplete ctrl+n to activate
+set splitbelow splitright "makes split pages open below and to the right
+autocmd BufWritePre * %s/\s/+$//e "automatically deletes trailing blank spaces on save
 
 filetype plugin indent on "have VIM load indentation rules and plugins based on filetype
