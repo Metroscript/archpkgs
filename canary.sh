@@ -28,9 +28,9 @@ yay -S --noconfirm librewolf-bin popsicle-git plymouth-git timeshift downgrade
 sudo sed -i -e 's/MODULES=()/MODULES=(amdgpu)/' -i -e 's/udev/udev plymouth/g' -i -e 's/encrypt/plymouth-encrypt/g' /etc/mkinitcpio.conf
 sudo mkinitcpio -p linux linux-lts
 sudo sed -i 's/splash/splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
-#sudo cp /usr/share/plymouth/arch-logo.png /usr/share/plymouth/themes/spinner/watermark.png
-#sudo sed -i 's/WatermarkVerticalAlignment=0.96/WatermarkVerticalAlignment=.5/' /usr/share/plymouth/themes/spinner/spinner.plymouth
-#sudo plymouth-set-default-theme -R spinner
+sudo cp /usr/share/plymouth/arch-logo.png /usr/share/plymouth/themes/spinner/watermark.png
+sudo sed -i 's/WatermarkVerticalAlignment=0.96/WatermarkVerticalAlignment=.5/g' /usr/share/plymouth/themes/spinner/spinner.plymouth
+sudo plymouth-set-default-theme -R spinner
 
 #Kernel Fallbacks
 sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/arch-fallback.conf
