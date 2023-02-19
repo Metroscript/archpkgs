@@ -29,7 +29,7 @@ sudo sed -i -e 's/MODULES=()/MODULES=(amdgpu)/' -i -e 's/udev/udev plymouth/g' -
 sudo mkinitcpio -p linux linux-lts
 sudo sed -i 's/splash/splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
 sudo cp /usr/share/plymouth/arch-logo.png /usr/share/plymouth/themes/spinner/watermark.png
-sudo sed -i 's/WatermarkVerticalAlignment=.96/WatermarkVerticalAlignment=.5' /usr/share/plymouth/themes/spinner/spinner.plymouth
+sudo sed -i e 's/DialogVerticalAlignment=.382/DialogVerticalAlignment=.75/' -i -e 's/WatermarkVerticalAlignment=.96/WatermarkVerticalAlignment=.5' /usr/share/plymouth/themes/spinner/spinner.plymouth
 sudo plymouth-set-default-theme -R spinner
 
 #Kernel Fallbacks
