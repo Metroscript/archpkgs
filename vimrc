@@ -16,6 +16,7 @@ if has ("syntax") "enable syntax highlighting if applicable
   syntax on
 endif
 
+"Configure word search
 set incsearch "search as you type
 set smartcase "prioritise matching case when searching
 set ignorecase "search regardless of casing
@@ -24,7 +25,7 @@ set hlsearch "highlight search results
 set ruler "always show current position
 set background=light "makes things darker somehow
 nmap <leader>w :w!<cr> "use 'w' to quicksave
-set clipboard=unamedplus "makes the default clipboard the system clipboard
+set clipboard=unnamedplus "makes the default clipboard the system clipboard
 "rebinds to copy to the system clipboard. Requires gvim
 vnoremap <C-c> "+y
 map <C-p> "+P
