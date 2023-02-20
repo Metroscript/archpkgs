@@ -4,6 +4,7 @@ set number "show line numbers
 set mouse=a "allows mouse use in all modes
 set showmatch "shows matching brackets when the cursor's on them
 set spell "enable spellchecking
+setlocal spell spelllang=en_au "enable australian english for spell checking
 set showcmd "show a partial command in the status line
 set autowrite "save before commands such as :make & :next
 set novisualbell "disable error flashes
