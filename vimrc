@@ -9,6 +9,8 @@ set autowrite "save before commands such as :make & :next
 set novisualbell "disable error flashes
 set noerrorbells "Disable error sounds
 set hidden "hide abandoned buffers
+filetype indent on "have VIM load indentation rules based on filetype
+filetype plugin on "enables syntax support for programming languages
 if has ("syntax") "enable syntax highlighting if applicable
   syntax on
 endif
@@ -31,5 +33,3 @@ set encoding=utf-8
 set wildmode=longest,list,full "enables autocomplete ctrl+n to activate
 set splitbelow splitright "makes split pages open below and to the right
 autocmd BufWritePre * %s/\s/+$//e "automatically deletes trailing blank spaces on save
-
-filetype plugin indent on "have VIM load indentation rules and plugins based on filetype
