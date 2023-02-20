@@ -1,7 +1,11 @@
 "VIM CONFIG FILE
 
+"General config
 set number "show line numbers
+set clipboard=unnamedplus "makes the default clipboard the system clipboard
 set mouse=a "allows mouse use in all modes
+"rebinds to copy to the system clipboard. Requires gvim
+vmap <C-C> "+y
 set showmatch "shows matching brackets when the cursor's on them
 set spell "enable spellchecking
 setlocal spell spelllang=en_au "enable australian english for spell checking
@@ -22,12 +26,9 @@ set smartcase "prioritise matching case when searching
 set ignorecase "search regardless of casing
 set hlsearch "highlight search results
 
+"Advanced config
 set ruler "always show current position
 set background=light "makes things darker somehow
-nmap <leader>w :w!<cr> "use 'w' to quicksave
-set clipboard=unnamedplus "makes the default clipboard the system clipboard
-"rebinds to copy to the system clipboard. Requires gvim
-vnoremap <C-c> "+y
 map <C-p> "+P
 set autoindent "automatically formats indenting if applicable
 set fileformat=unix
