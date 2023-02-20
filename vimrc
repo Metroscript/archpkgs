@@ -4,9 +4,6 @@
 set number "show line numbers
 set clipboard=unnamedplus "makes the default clipboard the system clipboard
 set mouse=a "allows mouse use in all modes
-"rebinds to copy to the system clipboard. (leader = \)Requires gvim
-vmap <leader>c "+y
-map <leader>p "+P
 set showmatch "shows matching brackets when the cursor's on them
 set spell "enable spellchecking
 setlocal spell spelllang=en_au "enable australian english for spell checking
@@ -31,6 +28,9 @@ set hlsearch "highlight search results
 set ruler "always show current position
 set background=light "makes things darker somehow
 set autoindent "automatically formats indenting if applicable
+"rebinds to copy to the system clipboard. (leader = \)Requires gvim
+vmap <leader>c "+y
+map <leader>p "+P
 set fileformat=unix
 set encoding=utf-8
 set wildmode=longest,list,full "enables autocomplete ctrl+n to activate
