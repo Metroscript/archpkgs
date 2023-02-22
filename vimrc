@@ -31,8 +31,8 @@ set cursorcolumn "highlights the current column
 set background=light "makes things darker somehow
 set autoindent "automatically formats indenting if applicable
 "rebinds to copy to the system clipboard. (leader = \)Requires gvim
-vmap <leader>c "+y
-map <leader>p "+P
+vmap <silent> <C-c> :w !wl-copy<CR><CR>
+map <silent> <C-p> :w !wl-paste
 "rebinds 'jj' to the esckey, ctrl z/y to undo and redo
 imap jj <esc>
 map <C-z> u
