@@ -41,9 +41,9 @@ set background=light "makes things darker somehow
     "rebinds 'jj' to the esckey, Ctrl q to close tab, ctrl t to split tab, ctrl z/y to undo and redo, Ctrl n to newtab and Ctrl f to word search
       imap jj <esc>
       map <C-z> u
-    map <C-y> <C-R>
+      map <C-y> <C-R>
       map <C-f> /
-      map <silent ><C-t> :split<CR>
+      map <silent> <C-t> :split<CR>
       map <silent> <C-q> :close<CR>
     "simplify split tab navigation
       map <C-h> <C-w>h
