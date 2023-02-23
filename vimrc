@@ -28,12 +28,13 @@ set cursorline "underlines the current line
 set cursorcolumn "highlights the current column
 set background=light "makes things darker somehow
 "rebinds to copy and paste to the system clipboard.
-vmap <C-c> y:call system("wl-copy", @")<cr>
-map <C-v> :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
-"rebinds 'jj' to the esckey, ctrl z/y to undo and redo
+vmap <silent> <C-c> y:call system("wl-copy", @")<cr>
+map <silent> <C-v> :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+"rebinds 'jj' to the esckey, ctrl z/y to undo and redo, and Ctrl f to word search
 imap jj <esc>
 map <C-z> u
 map <C-y> <C-R>
+map <C-f> /
 "sets unix fileformat and language encoding
 set fileformat=unix
 set encoding=utf-8
