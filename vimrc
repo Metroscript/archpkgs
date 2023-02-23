@@ -33,7 +33,7 @@ map <C-v> :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 
 "rebinds 'jj' to the esckey, ctrl z/y to undo and redo
 imap jj <esc>
 map <C-z> u
-map <C-y> C-R
+map <C-y> <C-R>
 "sets unix fileformat and language encoding
 set fileformat=unix
 set encoding=utf-8
