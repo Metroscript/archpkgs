@@ -49,4 +49,5 @@ mv archpkgs/vimrc .vimrc
 sudo timedatectl set-timezone Australia/Sydney
 sudo systemctl enable systemd-timesyncd sddm-plymouth cups
 systemctl --user --now enable wireplumber.service pipewire.service pipewire-pulse.service
+rm -rf grapejuice-git/ archpkgs/ yay/
 reboot
