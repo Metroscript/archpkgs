@@ -43,6 +43,7 @@ sudo sed -i -e 's/Arch Linux/Arch Linux-LTS Fallback/' -i -e 's/initramfs-linux-
 #Final Configuration
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
+sudo mv archpkgs/sddm.conf /etc/sddm.conf
 mv archpkgs/bashrc .bashrc
 mv archpkgs/yt-dlp.conf .config/
 mv archpkgs/vimrc .vimrc
