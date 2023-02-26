@@ -22,7 +22,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
-yay -S --noconfirm librewolf-bin popsicle-git plymouth-git timeshift downgrade
+yay -S --noconfirm librewolf-bin popsicle-git plymouth-git timeshift downgrade minecraft-launcher
 
 #Configure Plymouth
 sudo sed -i -e 's/MODULES=()/MODULES=(amdgpu)/' -i -e 's/udev/udev plymouth/g' -i -e 's/encrypt/plymouth-encrypt/g' /etc/mkinitcpio.conf
