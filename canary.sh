@@ -48,7 +48,7 @@ gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.desktop.default-applications.terminal exec xfce4-terminal
 sudo mv archpkgs/sddm.conf /etc/sddm.conf
 mv archpkgs/bashrc .bashrc
-mv archpkgs/yt-dlp.conf .config/
+# mv archpkgs/yt-dlp.conf .config/
 sudo cp archpkgs/vimrc /etc/vim/vimrc
 mv archpkgs/vimrc .vimrc
 sudo timedatectl set-timezone Australia/Sydney
