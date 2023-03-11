@@ -25,7 +25,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
-yay -S --noconfirm librewolf-bin plymouth-git timeshift downgrade prismlauncher
+yay -S --noconfirm librewolf-bin plymouth timeshift downgrade prismlauncher
 
 #Configure Plymouth
 sudo sed -i -e 's/MODULES=()/MODULES=(amdgpu)/' -i -e 's/udev/udev plymouth/g' -i -e 's/encrypt/plymouth-encrypt/g' /etc/mkinitcpio.conf
